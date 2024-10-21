@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+/* px veranderd naar vh op vele plekken. IS */
+
+:root {
+    --colors-white: #fff;
+    --colors-black: #000;
+    --colors-turqoise: #20cabf;
+    --colors-dark-gray: #212121;
+    --colors-light-gray: #353535;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--colors-turqoise);
+}
+
+body {
+    margin: 0;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+nav {
+    top: 0;
+    z-index: 99999999999;
+    background-color: var(--colors-turqoise);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vh 3vh;
+}
+
+img {
+    width: 15%;
+    margin-left: 2vw;
+}
+
+.links {
+    display: flex;
+    gap: 1vw;
+}
+
+.links a {
+    padding: 1vh 1vh;
+    border: 2px solid var(--colors-white);
+    text-decoration: none;
+    color: var(--colors-white);
+    font-weight: bold;
+}
+
+.links a:hover {
+    color: var(--colors-turqoise);
+    background-color: var(--colors-white);
+    border-radius: 0.5vh;
+    transition: all 0.3s ease-in-out;
+}
+
+header {
+    height: 20vw;
+    max-height: 50vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: var(--colors-dark-gray);
+    color: var(--colors-white);
+    font-size: 1.2rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 7.5vh 0;
+    background-color: var(--colors-light-gray);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
+    min-width: 320px;
+    max-width: 920px;
+    background-color: var(--colors-dark-gray);
+    border-radius: 8px;
+}
+
+form {
+    min-width: 270px;
+    margin: 0 10vw 5vh 10vw;
+}
+
+.container h2 {
+    padding-top: 3vh;
+    padding-bottom: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+h2, label, p {
+    color: var(--colors-white);
+}
+
+.container .textfield {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.form .textfield input {
+    height: 5vh;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: black;
+    margin-top: 2vh;
+    border: 1px solid gold;
+    border-radius: 6px;
+    padding: 2vh;
+}
+
+#birthday {
+    padding: 0 0 0 10px;
+}
+
+form .column {
+    display: flex;
+    gap: 15px;
+}
+
+#birthday {
+    padding: none;
+}
+
+.form .selection-box h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    margin-top: 2vh;
+}
+
+.selection-box select {
+    margin: 10px 0;
+}
+
+input[type="radio"]:checked+label+.selection-box-2 {
+    display: block;
+}
+
+.selection-box-2 {
+    display: none;
+}
+
+.selection-box-2 select {
+    margin-bottom: 10px;
+}
+
+.selection-box select, .selection-box-2 select{
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.comment h2 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.options h2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.form .options {
+    cursor: pointer;
+    margin-top: 4vh;
+    height: 100%;
+}
+
+.payment {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+/* Wat divs weggehaald zoals options. Deed helemaal niks. IS */
+
+.newsleter {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.agreement {
+    cursor: pointer;
+    margin-bottom: 2vh;
+}
+
+.redirect-button {
+    margin-bottom: 3vh;
+    text-decoration: none;
+    border: 1px var(--colors-white);
+    color: var(--colors-black);
+    font-size: 1rem;
+    background-color: var(--colors-white);
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding: 10px 10px;
+    border-radius: 0.5vh;
+    cursor: pointer;
+}
+
+.redirect-button:hover {
+    background-color: var(--colors-turqoise);
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+footer {
+    background-color: var(--colors-turqoise);
+    color: var(--colors-white);
+    padding: 3vh 3vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: last baseline;  /* text naar beneden verplaats. IS */
+}
+
+.credits a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: flex-start;
+    gap: 2vw;
+}
+
+.credits a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width:480px) {
+    nav{
+        flex-direction: column;
+    }
+    .links {  /* linkjes staan nu wel onder elkaar. IS */
+        flex-direction: column;
+        gap: .5vh;
+    }
+    .logo{
+        text-align: center;
+    }
+    header {
+        flex-direction: column;
+        font-size: 1.2rem;
+        height: 40vw;
+        background-size: 200vw;
+    }
+    .form .column {
+        flex-direction: column;
+    }
+    .copyright {
+        margin-top: 10px;
+        justify-content: center;
+    }
+}
